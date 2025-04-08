@@ -1,0 +1,220 @@
+
+        /* Custom styles that can't be replaced with Bootstrap */
+        body {
+            background-color: #0f0f1a;
+            color: #ffffff;
+        }
+        
+        .logo {
+            color: #e50914;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e50914;
+        }
+        
+        .movie-poster {
+            flex: 0 0 300px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .movie-meta .rating {
+            color: #ffc107;
+        }
+        
+        .btn-primary {
+            background-color: #e50914;
+            border-color: #e50914;
+        }
+        
+        .btn-primary:hover {
+            background-color: #f40612;
+            border-color: #f40612;
+        }
+        
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .movie-description {
+            color: #d9d9d9;
+        }
+        
+        .detail-label {
+            min-width: 120px;
+            color: #b3b3b3;
+        }
+        
+        .section-title {
+            border-bottom: 1px solid #2a2a3a;
+        }
+        
+        .cast-photo {
+            height: 200px;
+        }
+        
+        .cast-character {
+            color: #b3b3b3;
+        }
+        
+        .movie-card {
+            background-color: #1a1a2a;
+            transition: transform 0.3s;
+        }
+        
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .movie-card-poster {
+            height: 300px;
+        }
+        
+        .movie-card-meta {
+            color: #b3b3b3;
+        }
+        
+        /* Rating Section */
+        .rating-section {
+            background-color: #1a1a2a;
+        }
+        
+        .average-rating-value {
+            color: #ffc107;
+        }
+        
+        .average-rating-stars {
+            color: #ffc107;
+        }
+        
+        .average-rating-count {
+            color: #b3b3b3;
+        }
+        
+        .rating-star {
+            color: #ffc107;
+        }
+        
+        .rating-progress {
+            background-color: #2a2a3a;
+        }
+        
+        .rating-progress-fill {
+            background-color: #ffc107;
+        }
+        
+        .rating-percentage {
+            color: #b3b3b3;
+        }
+        
+        /* Comments Section */
+        .user-rating{
+            display: flex;
+            align-items: center;
+        }
+        .comment-form {
+            background-color: #1a1a2a;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            background-color: #2a2a3a;
+            border: 1px solid #3a3a4a;
+            color: white;
+        }
+        
+        .star-rating-input i {
+            color: #3a3a4a;
+        }
+        
+        .star-rating-input i.active {
+            color: #ffc107;
+        }
+        
+        .comment-list {
+            background-color: #1a1a2a;
+        }
+        
+        .comment {
+            border-bottom: 1px solid #2a2a3a;
+        }
+        
+        .comment-date {
+            color: #b3b3b3;
+        }
+        
+        .comment-rating {
+            color: #ffc107;
+        }
+        
+        .comment-text {
+            color: #d9d9d9;
+        }
+        
+        footer {
+            border-top: 1px solid #2a2a3a;
+            color: #b3b3b3;
+        }
+        .movie-trailer {
+        flex: 0 0 560px;
+        max-width: 560px;
+    }
+    
+    .trailer-frame {
+        width: 100%;
+        height: 450px; 
+        max-height: 500px; 
+        aspect-ratio: 16/9; 
+        border-radius: 10px;
+        
+    }
+    /*Update and Delete button*/
+    .card-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 4px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      
+      .card-btn:first-child {
+        background-color: #007bff;
+        border-color: #007bff;
+        margin-right: 4%;
+      }
+      
+      .card-btn:last-child {
+        background-color: #dc3545;
+        border-color: #dc3545;
+      }
+      
+      .card-btn:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+
+      /*Media Querrires*/
+      @media (max-width: 768px) {
+        .card-btn {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      
+        .card-btn:first-child {
+          margin-right: 0;
+        }
+      }

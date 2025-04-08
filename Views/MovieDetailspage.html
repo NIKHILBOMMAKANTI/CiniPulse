@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - MyMovieDB</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../Public/Css/MovieDetailspage.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+
+    <!--Jquery CDN-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+    
+
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex justify-content-between align-items-center py-4 border-bottom border-secondary mb-4">
+            <div class="logo fs-3 fw-bold">MyMovieDB</div>
+            <nav class="nav-links d-flex">
+                <a class="text-decoration-none ms-3" href="../Views/Homepage.html">Home</a>
+                <a class="text-decoration-none ms-3" href="../Views/Movies.html">Movies</a>
+                <a class="text-decoration-none ms-3" href="../Views/SignUp.html">Sign Up</a>
+                <a class="text-decoration-none ms-3" href="../Views/Login.html">Log In</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- <section class="movie-hero d-flex gap-4 mb-5">
+                <div class="movie-poster rounded overflow-hidden">
+                    <img class="img-fluid" src="https://via.placeholder.com/300x450" alt="Movie Poster">
+                </div>
+                
+                <div>
+                    
+                </div>
+                <div class="movie-info">
+                    <h1 class="movie-title mb-2">The Dark Knight</h1>
+                    
+                    <div class="movie-meta d-flex align-items-center mb-3">
+                        <span class="rating me-3"><i class="fas fa-star"></i> 9.0/10</span>
+                        <span class="me-3"><i class="fas fa-calendar-alt me-1"></i> 2008</span>
+                        <span class="me-3"><i class="fas fa-clock me-1"></i> 152 min</span>
+                        <span><i class="fas fa-tag me-1"></i> Action, Crime, Drama</span>
+                    </div>
+                    
+                    <div class="movie-actions d-flex gap-3 mb-4">
+                        <button class="btn btn-primary"><i class="fas fa-play me-1"></i> Watch Now</button>
+                        <button class="btn btn-secondary"><i class="fas fa-plus me-1"></i> Add to List</button>
+                        <button class="btn btn-secondary"><i class="fas fa-share me-1"></i> Share</button>
+                    </div>
+                    
+                    <p class="movie-description mb-4">
+                        When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, 
+                        Batman must accept one of the greatest psychological and physical tests of his ability 
+                        to fight injustice. Christian Bale and director Christopher Nolan reunite following their 
+                        blockbuster success with Batman Begins!
+                    </p>
+                    
+                    <div class="movie-details d-grid" style="grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 30px;">
+                        <div class="detail-item d-flex">
+                            <span class="detail-label">Director:</span>
+                            <span class="detail-value">Christopher Nolan</span>
+                        </div>
+                        <div class="detail-item d-flex">
+                            <span class="detail-label">Writers:</span>
+                            <span class="detail-value">Jonathan Nolan, Christopher Nolan, David S. Goyer</span>
+                        </div>
+                        <div class="detail-item d-flex">
+                            <span class="detail-label">Stars:</span>
+                            <span class="detail-value">Christian Bale, Heath Ledger, Aaron Eckhart</span>
+                        </div>
+                        <div class="detail-item d-flex">
+                            <span class="detail-label">Country:</span>
+                            <span class="detail-value">USA, UK</span>
+                        </div>
+                        <div class="detail-item d-flex">
+                            <span class="detail-label">Language:</span>
+                            <span class="detail-value">English, Mandarin</span>
+                        </div>
+                        <div class="detail-item d-flex">
+                            <span class="detail-label">Awards:</span>
+                            <span class="detail-value">Won 2 Oscars, 159 wins & 163 nominations total</span>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section class="movie-hero d-flex gap-4 mb-5 justify-content-center align-items-center"
+                id="movie-media-container">
+
+            </section>
+
+
+            <!-- Movie Description -->
+            <section class="movie-info" id="movie-info">
+
+            </section>
+            <!-- <section class="cast-section mb-5">
+                <h2 class="section-title fs-3 mb-4 pb-2">Top Cast</h2>
+                <div class="cast-grid d-grid" style="grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px;">
+                    <div class="cast-card text-center">
+                        <div class="cast-photo rounded overflow-hidden mb-2">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/150x200" alt="Christian Bale">
+                        </div>
+                        <h3 class="cast-name fw-bold mb-1">Christian Bale</h3>
+                        <p class="cast-character">Bruce Wayne / Batman</p>
+                    </div>
+                    <div class="cast-card text-center">
+                        <div class="cast-photo rounded overflow-hidden mb-2">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/150x200" alt="Heath Ledger">
+                        </div>
+                        <h3 class="cast-name fw-bold mb-1">Heath Ledger</h3>
+                        <p class="cast-character">Joker</p>
+                    </div>
+                    <div class="cast-card text-center">
+                        <div class="cast-photo rounded overflow-hidden mb-2">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/150x200" alt="Aaron Eckhart">
+                        </div>
+                        <h3 class="cast-name fw-bold mb-1">Aaron Eckhart</h3>
+                        <p class="cast-character">Harvey Dent</p>
+                    </div>
+                    <div class="cast-card text-center">
+                        <div class="cast-photo rounded overflow-hidden mb-2">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/150x200" alt="Michael Caine">
+                        </div>
+                        <h3 class="cast-name fw-bold mb-1">Michael Caine</h3>
+                        <p class="cast-character">Alfred</p>
+                    </div>
+                    <div class="cast-card text-center">
+                        <div class="cast-photo rounded overflow-hidden mb-2">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/150x200" alt="Maggie Gyllenhaal">
+                        </div>
+                        <h3 class="cast-name fw-bold mb-1">Maggie Gyllenhaal</h3>
+                        <p class="cast-character">Rachel</p>
+                    </div>
+                    <div class="cast-card text-center">
+                        <div class="cast-photo rounded overflow-hidden mb-2">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/150x200" alt="Gary Oldman">
+                        </div>
+                        <h3 class="cast-name fw-bold mb-1">Gary Oldman</h3>
+                        <p class="cast-character">Gordon</p>
+                    </div>
+                </div>
+            </section> -->
+
+            <section class="similar-movies mb-5">
+                <h2 class="section-title fs-3 mb-4 pb-2">Similar Movies</h2>
+                <div class="movies-grid d-grid" id="movies-grid"
+                    style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
+
+                    <!-- <div class="movie-card rounded overflow-hidden">
+                        <div class="movie-card-poster">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/200x300"
+                                alt="Movie Poster">
+                        </div>
+                        <div class="movie-card-info p-3">
+                            <h3 class="movie-card-title fs-5 mb-1 text-truncate">Batman Begins</h3>
+                            <div class="movie-card-meta d-flex justify-content-between">
+                                <span>2005</span>
+                                <span>8.2/10</span>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="movie-card rounded overflow-hidden">
+                        <div class="movie-card-poster">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/200x300"
+                                alt="Movie Poster">
+                        </div>
+                        <div class="movie-card-info p-3">
+                            <h3 class="movie-card-title fs-5 mb-1 text-truncate">The Dark Knight Rises</h3>
+                            <div class="movie-card-meta d-flex justify-content-between">
+                                <span>2012</span>
+                                <span>8.4/10</span>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="movie-card rounded overflow-hidden">
+                        <div class="movie-card-poster">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/200x300"
+                                alt="Movie Poster">
+                        </div>
+                        <div class="movie-card-info p-3">
+                            <h3 class="movie-card-title fs-5 mb-1 text-truncate">Inception</h3>
+                            <div class="movie-card-meta d-flex justify-content-between">
+                                <span>2010</span>
+                                <span>8.8/10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie-card rounded overflow-hidden">
+                        <div class="movie-card-poster">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/200x300"
+                                alt="Movie Poster">
+                        </div>
+                        <div class="movie-card-info p-3">
+                            <h3 class="movie-card-title fs-5 mb-1 text-truncate">Interstellar</h3>
+                            <div class="movie-card-meta d-flex justify-content-between">
+                                <span>2014</span>
+                                <span>8.6/10</span>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="movie-card rounded overflow-hidden">
+                        <div class="movie-card-poster">
+                            <img class="w-100 h-100 object-fit-cover" src="https://via.placeholder.com/200x300"
+                                alt="Movie Poster">
+                        </div>
+                        <div class="movie-card-info p-3">
+                            <h3 class="movie-card-title fs-5 mb-1 text-truncate">Joker</h3>
+                            <div class="movie-card-meta d-flex justify-content-between">
+                                <span>2019</span>
+                                <span>8.4/10</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+
+            <!-- Rating Section -->
+            <!-- <section class="rating-section rounded p-4 mb-5">
+                <h2 class="section-title fs-3 mb-4 pb-2">User Ratings</h2>
+                
+                <div class="rating-overview d-flex align-items-center mb-4">
+                    <div class="average-rating text-center me-5">
+                        <div class="average-rating-value fs-1 fw-bold">9.0</div>
+                        <div class="average-rating-stars fs-4 my-1">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="average-rating-count">Based on 2,548 ratings</div>
+                    </div>
+                    
+                    <div class="rating-distribution flex-grow-1">
+                        <div class="rating-bar d-flex align-items-center mb-2">
+                            <div class="rating-star d-flex align-items-center" style="width: 80px;">
+                                5 <i class="fas fa-star ms-1"></i>
+                            </div>
+                            <div class="rating-progress flex-grow-1 mx-2" style="height: 10px;">
+                                <div class="rating-progress-fill h-100 rounded" style="width: 85%"></div>
+                            </div>
+                            <div class="rating-percentage text-end" style="width: 40px;">85%</div>
+                        </div>
+                        <div class="rating-bar d-flex align-items-center mb-2">
+                            <div class="rating-star d-flex align-items-center" style="width: 80px;">
+                                4 <i class="fas fa-star ms-1"></i>
+                            </div>
+                            <div class="rating-progress flex-grow-1 mx-2" style="height: 10px;">
+                                <div class="rating-progress-fill h-100 rounded" style="width: 10%"></div>
+                            </div>
+                            <div class="rating-percentage text-end" style="width: 40px;">10%</div>
+                        </div>
+                        <div class="rating-bar d-flex align-items-center mb-2">
+                            <div class="rating-star d-flex align-items-center" style="width: 80px;">
+                                3 <i class="fas fa-star ms-1"></i>
+                            </div>
+                            <div class="rating-progress flex-grow-1 mx-2" style="height: 10px;">
+                                <div class="rating-progress-fill h-100 rounded" style="width: 3%"></div>
+                            </div>
+                            <div class="rating-percentage text-end" style="width: 40px;">3%</div>
+                        </div>
+                        <div class="rating-bar d-flex align-items-center mb-2">
+                            <div class="rating-star d-flex align-items-center" style="width: 80px;">
+                                2 <i class="fas fa-star ms-1"></i>
+                            </div>
+                            <div class="rating-progress flex-grow-1 mx-2" style="height: 10px;">
+                                <div class="rating-progress-fill h-100 rounded" style="width: 1%"></div>
+                            </div>
+                            <div class="rating-percentage text-end" style="width: 40px;">1%</div>
+                        </div>
+                        <div class="rating-bar d-flex align-items-center">
+                            <div class="rating-star d-flex align-items-center" style="width: 80px;">
+                                1 <i class="fas fa-star ms-1"></i>
+                            </div>
+                            <div class="rating-progress flex-grow-1 mx-2" style="height: 10px;">
+                                <div class="rating-progress-fill h-100 rounded" style="width: 1%"></div>
+                            </div>
+                            <div class="rating-percentage text-end" style="width: 40px;">1%</div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- Comments Section -->
+            <section class="comments-section mb-5">
+                <h2 class="section-title fs-3 mb-4 pb-2">User Reviews</h2>
+
+                <!-- Comment Form -->
+                <div class="comment-form rounded p-4 mb-4">
+                    <h3 class="mb-3">Add Your Review</h3>
+                    <form>
+                        <!-- <div class="form-group mb-3">
+                            <label class="d-block mb-1" for="name">Your Name</label>
+                            <input class="w-100 rounded p-2" type="text" id="name" required>
+                        </div> -->
+                        <!-- <div class="form-group mb-3">
+                            <label class="d-block mb-1">Your Rating</label>
+                            <div class="star-rating-input d-flex justify-content-between my-2">
+                                <i class="fas fa-star" data-rating="1"></i>
+                                <i class="fas fa-star" data-rating="2"></i>
+                                <i class="fas fa-star" data-rating="3"></i>
+                                <i class="fas fa-star" data-rating="4"></i>
+                                <i class="fas fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="rating" name="rating" required>
+                        </div> -->
+                        <div class="form-group mb-3">
+                            <label class="d-block mb-1" for="comment">Your Review</label>
+                            <textarea class="w-100 rounded p-2" id="comment" style="min-height: 100px;"
+                                required></textarea>
+                        </div>
+                        <p>Share your rating</p>
+                        <div id="rateYo"></div>
+                        <button type="submit" class="btn btn-primary mt-3" id="submitreview">Submit Review</button>
+                    </form>
+                </div>
+
+                <!-- Comment List -->
+                <div class="comment-list rounded overflow-hidden" id="comment-list">
+                    <!-- <div class="comment p-4">
+                        <div class="comment-header d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                                <span class="comment-author fw-bold">MovieFan123</span>
+                                <span class="comment-rating ms-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5/5</span>
+                            </div>
+                            <span class="comment-date">March 15, 2023</span>
+                        </div>
+                        <p class="comment-text">
+                            This movie is an absolute masterpiece! Heath Ledger's performance as the Joker is 
+                            legendary and completely redefined what a comic book movie could be. The pacing, 
+                            cinematography, and score all work together perfectly to create an unforgettable 
+                            experience.
+                        </p> -->
+                    <!-- </div> -->
+
+                    <!-- <div class="comment p-4">
+                        <div class="comment-header d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                                <span class="comment-author fw-bold">CinemaLover</span>
+                                <span class="comment-rating ms-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.5/5</span>
+                            </div>
+                            <span class="comment-date">February 28, 2023</span>
+                        </div>
+                        <p class="comment-text">
+                            While I think the movie is excellent, I do feel it's slightly overrated. The action 
+                            sequences are top-notch, and the performances are stellar, but the runtime could 
+                            have been trimmed a bit. Still, one of the best superhero movies ever made.
+                        </p>
+                    </div> -->
+                    <!--                     
+                    <div class="comment p-4">
+                        <div class="comment-header d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                                <span class="comment-author fw-bold">FilmCritic101</span>
+                                <span class="comment-rating ms-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5/5</span>
+                            </div>
+                            <span class="comment-date">January 10, 2023</span>
+                        </div>
+                        <p class="comment-text">
+                            Christopher Nolan outdid himself with this film. The moral complexity, the character 
+                            development, and the tension throughout are unmatched in the genre. It's not just a 
+                            great comic book movie - it's a great movie period. The interrogation scene between 
+                            Batman and Joker is pure cinematic gold.
+                        </p>
+                    </div> -->
+                </div>
+            </section>
+            <!--Boostrap Modal-->
+            <div class="modal fade" id="modal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <!-- Content will be inserted here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center py-4 mt-5 border-top border-secondary">
+            <p>&copy; 2025 CiniPulse. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Public/Javascript/Moviedetailspage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+/*Reseting the Css*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../Images/backgriund.jpg');
+    background-color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+}
+.Signbtn{
+    background-color: #dc3545;
+    color: #ffffff;
+    border-radius: 20px;
+    width: 60%;
+    padding: 8px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border: 1px solid #ffffff;
+}
+.Signbtn:hover{
+    background-color: #ffffff;
+    color: #dc3545;
+    border: 4px solid #dc3545;
+}
+.container{
+    padding: 50px;
+    max-width: 100%;
+    
+}
+.maincontainer{
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.register-form{
+    color: #ffffff;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+.form-input{
+    width: 100%; 
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    outline:none;
+    background-color: transparent;
+    color: #ffffff;
+    
+}
+.form-input:hover{
+    border: 2px solid #ffffff !important;
+    border-radius: 20px !important;
+    background-color: transparent !important;
+    outline:none !important; 
+    color: #ffffff !important;
+}
+.form-input::placeholder{
+    color: #ffffff;
+}
+.form-input option {
+    color: black; 
+}
+.heading-text{
+    color: #dc3545;
+    /* color: #4B0082; */
+    font-size: 1.5rem;
+    font-weight: 900; /* Makes the text bold */
+
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+.account-exists{
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-btn{
+    background: transparent;
+    border: 2px solid white; 
+    color: white; 
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    width: 50%;
+    /* padding: 12px; */
+}
+
+.login-btn:hover {
+    background: #A9A9A9; /* Red background on hover */
+    color: white;
+}
+.subtext {
+    color: #d1d1d1;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+.container:first-child {
+    border-right: 1px solid white; 
+    padding-right: 50px;
+}
+
+.login-btn a {
+    color: #ffffff;
+    text-decoration: none; 
+    display: block; 
+}
+
+

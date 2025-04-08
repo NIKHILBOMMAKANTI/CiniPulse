@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiniPulse - Movie Streaming</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Public/Css/Homepage.css">
+</head>
+
+<body>
+    <div class="container">
+    <!-- Navigation -->
+    <header class="d-flex justify-content-between align-items-center py-4 border-bottom border-secondary mb-4">
+        <div class="logo fs-3 fw-bold"> <a class="navbar-brand main-logo" href="#">
+            <span>Cini</span>Pulse
+        </a></div>
+        <nav class="nav-links d-flex">
+            <a class="text-decoration-none ms-3" href="../Views/Homepage.html">Home</a>
+            <a class="text-decoration-none ms-3" href="../Views/Movies.html">Movies</a>
+            <a class="text-decoration-none ms-3" href="../Views/SignUp.html">Sign Up</a>
+            <a class="text-decoration-none ms-3" href="../Views/Login.html">Log In</a>
+        </nav>
+    </header>
+</div>
+<section class="hero-section">
+    <div class="hero-video-container">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-popcorn-falling-down-on-a-table-1768-large.mp4" type="video/mp4">
+            <!-- Fallback image if video doesn't load -->
+            <img src="https://via.placeholder.com/1920x1080" alt="Movie background">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    <div class="hero-content">
+        <h1 class="hero-title">Discover & Review Your Favorite Movies</h1>
+        <p class="hero-description">Explore honest reviews, ratings, and opinions from movie lovers worldwide. 
+            Share your own thoughts and be part of the community!</p>
+        <div class="hero-actions">
+            <a href="#" class="btn btn-primary">Browse Reviews</a>
+        </div>
+    </div>
+</section>
+       <!-- Features Section -->
+<section class="features-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose CiniPulse?</h2>
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="feature-card p-4 h-100">
+                    <div class="feature-icon mb-4">
+                        <i class="fas fa-star fa-3x text-warning"></i>
+                    </div>
+                    <h3 class="mb-3">Rate & Review</h3>
+                    <p>Share your honest opinions by rating movies and writing detailed reviews. Help others discover great films based on your experiences.</p>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="feature-card p-4 h-100">
+                    <div class="feature-icon mb-4">
+                        <i class="fas fa-film fa-3x text-danger"></i>
+                    </div>
+                    <h3 class="mb-3">Watch Trailers</h3>
+                    <p>Browse and watch the latest movie trailers. Get a sneak peek before you decide what to watch next.</p>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="feature-card p-4 h-100">
+                    <div class="feature-icon mb-4">
+                        <i class="fas fa-users fa-3x text-primary"></i>
+                    </div>
+                    <h3 class="mb-3">Community Ratings</h3>
+                    <p>See the average ratings from our community of movie lovers. Discover what's trending and popular among fellow cinephiles.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="#" class="footer-logo">
+                        <span>Cini</span>Pulse
+                    </a>
+                    <p >Discover, review, and rate your favorite movies! Join a community of film enthusiasts, share your thoughts, and explore honest reviews</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Support</h5>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Account</h5>
+                        <ul>
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Watchlist</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Legal</h5>
+                        <ul>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR</a></li>
+                            <li><a href="#">Compliance</a></li>
+                            <li><a href="#">Licenses</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 CiniPulse. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>
