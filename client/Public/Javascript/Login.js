@@ -8,7 +8,7 @@ Loginbtn.addEventListener("click",async(e)=>{
         email,
         password
     }
-    const url = 'http://localhost:3000/auth/login'
+    const url = 'https://cinipulse.onrender.com/auth/login'
     const obj = {
         method:'POST',
         headers:{

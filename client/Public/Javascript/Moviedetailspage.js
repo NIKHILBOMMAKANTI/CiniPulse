@@ -1,7 +1,7 @@
 async function retrieveMovieById() {
   const urlParams = new URLSearchParams(window.location.search);
   movieid = urlParams.get("movie-id");
-  const url = `http://localhost:3001/movies/retrieveMovieById?movie-id=${movieid}`;
+  const url = `https://cinipulse.onrender.com/movies/retrieveMovieById?movie-id=${movieid}`;
   const token = sessionStorage.getItem("Token");
   obj = {
     method: "GET",
@@ -52,7 +52,7 @@ async function retriveAllReviews() {
   const urlParams = new URLSearchParams(window.location.search);
   movieid = urlParams.get("movie-id");
   console.log(movieid);
-  const url = `http://localhost:3001/review/retriveAllReviews?movie-id=${movieid}`;
+  const url = `https://cinipulse.onrender.com/review/retriveAllReviews?movie-id=${movieid}`;
   const token = sessionStorage.getItem("Token");
   console.log(token);
   const obj = {
@@ -124,7 +124,7 @@ async function retriveAllReviews() {
 retriveAllReviews();
 
 async function deleteReview(reviewid) {
-  const url = "http://localhost:3001/review/deleteReview";
+  const url = "https://cinipulse.onrender.com/review/deleteReview";
   const token = sessionStorage.getItem("Token");
   const obj = {
     method: "DELETE",
@@ -183,7 +183,7 @@ async function updateReview(reviewid) {
       content: comment,
     };
 
-    const url = "http://localhost:3001/review/updateReview";
+    const url = "https://cinipulse.onrender.com/review/updateReview";
     const token = sessionStorage.getItem("Token");
     const obj = {
       method: "PATCH",
@@ -225,7 +225,7 @@ async function updateReview(reviewid) {
 async function similarMovies(){
   const urlParams = new URLSearchParams(window.location.search);
   movieid = urlParams.get("movie-id");
-  const url = `http://localhost:3001/movies/similarMovies?movie-id=${movieid}`;
+  const url = `https://cinipulse.onrender.com/movies/similarMovies?movie-id=${movieid}`;
   const obj = {
     method: "GET",
     headers: {
@@ -285,7 +285,7 @@ submitreviewbtn.addEventListener("click", async (e) => {
   movieid = urlParams.get("movie-id");
   console.log(movieid);
   const comment = document.getElementById("comment").value;
-  url = `http://localhost:3001/review/addReview?movie-id=${movieid}`;
+  url = `https://cinipulse.onrender.com/review/addReview?movie-id=${movieid}`;
   const token = sessionStorage.getItem("Token");
   obj = {
     method: "POST",

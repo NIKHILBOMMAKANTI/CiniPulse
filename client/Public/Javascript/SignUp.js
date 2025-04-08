@@ -13,7 +13,7 @@ Signinbtn.addEventListener("click",async(e)=>{
         confirmpassword
     }
     
-    const url = 'http://localhost:3001/auth/register';
+    const url = 'https://cinipulse.onrender.com/auth/register';
     const obj = {
         method:'POST',
         headers:{

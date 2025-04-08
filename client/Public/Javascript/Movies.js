@@ -2,9 +2,9 @@ const limit = 12;
 let currentpage = 1;
 let searchQuery = "";
 async function retriveAllMovies(limit,offset = 0,search="") {
-  let url = `http://localhost:3001/movies/retriveAllMovies?limit=${limit}&offset=${offset}`;
+  let url = `https://cinipulse.onrender.com/movies/retriveAllMovies?limit=${limit}&offset=${offset}`;
   if(search){
-    url = `http://localhost:3001/movies/search?filter=${search}&limit=${limit}&offset=${offset}`
+    url = `https://cinipulse.onrender.com/movies/search?filter=${search}&limit=${limit}&offset=${offset}`
   }
   const token = sessionStorage.getItem("Token");
   const obj = {

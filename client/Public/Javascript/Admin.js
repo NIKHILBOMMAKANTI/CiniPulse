@@ -9,7 +9,7 @@ addmovie.addEventListener("click", async () => {
   formData.append("releaseDate", document.getElementById("releaseDate").value);
   formData.append("description", document.getElementById("description").value);
 
-  const url = "http://localhost:3000/movies/addMovie";
+  const url = "https://cinipulse.onrender.com/movies/addMovie";
   const token = sessionStorage.getItem("Token");
 
   const obj = {
@@ -47,7 +47,7 @@ addmovie.addEventListener("click", async () => {
 const limit = 12;
 let currentpage = 1;
 async function retriveAllMovies(limit,offset = 0) {
-  const url = `http://localhost:3000/movies/retriveAllMovies?limit=${limit}&offset=${offset}`;
+  const url = `https://cinipulse.onrender.com/movies/retriveAllMovies?limit=${limit}&offset=${offset}`;
   const token = sessionStorage.getItem("Token");
   const obj = {
     method: "GET",
@@ -233,7 +233,7 @@ submitbtn.addEventListener("click",async ()=>{
   formData.append("description", modalContent.querySelector("#description").value);
 
   // console.log([...formData.entries()])
-  const url = 'http://localhost:3000/movies/updateMovie'
+  const url = 'https://cinipulse.onrender.com/movies/updateMovie'
   const token = sessionStorage.getItem("Token");
  
   const obj = {
@@ -293,7 +293,7 @@ function deleteMovie(id) {
     })
     .then(async (result) => {
       if (result.isConfirmed) {
-        const url = "http://localhost:3000/movies/deleteMovie";
+        const url = "https://cinipulse.onrender.com/movies/deleteMovie";
         const token = sessionStorage.getItem("Token");
         obj = {
           method: "DELETE",
