@@ -1,3 +1,4 @@
+
 const limit = 12;
 let currentpage = 1;
 let searchQuery = "";
@@ -102,7 +103,7 @@ prev.addEventListener("click", () => {
 console.log(prev);
 
 function handleCardClick(movieId) {
-  window.location.href = `../../Views/MovieDetailspage.html?movie-id=${movieId}`;
+  window.location.href = `./MovieDetailspage.html?movie-id=${movieId}`;
 }
 
 //Search Functinality
