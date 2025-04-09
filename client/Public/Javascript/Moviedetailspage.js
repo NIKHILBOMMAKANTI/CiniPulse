@@ -83,7 +83,8 @@ async function retriveAllReviews() {
                         <p class="comment-text">
                             ${review.content}
                         </p>
-                         <div class="d-flex mt-3 "  style="display: ${review.editable ? 'block' : 'none'}">
+                        ${review.editable === true ?
+                         `<div class="d-flex mt-3">
                       
                         <button class="btn card-btn updatebtn" type="button"  reviewid = "${review._id}">
                             <i class="fas fa-edit me-1"></i> Update
@@ -91,7 +92,7 @@ async function retriveAllReviews() {
                         <button class="btn card-btn deletebtn" type="button" reviewid = "${review._id}">
                             <i class="fas fa-trash me-1"></i> Delete
                         </button>
-                    </div>
+                    </div>`:  ''}
                `;
                $(`.rateYo-${review._id}`).rateYo({
                 rating: review.rating,  
@@ -116,7 +117,9 @@ async function retriveAllReviews() {
     updatebtn.forEach((updbtn) => {
       updbtn.addEventListener("click", () => {
         const reviewid = updbtn.getAttribute("reviewid");
-        updateReview(reviewid);
+        const reviewElement = updbtn.closest(".comment"); 
+        const content = reviewElement.querySelector(".comment-text").textContent.trim();
+        updateReview(reviewid,content);
       });
     });
   }
@@ -155,7 +158,7 @@ async function deleteReview(reviewid) {
   }
 }
 
-async function updateReview(reviewid) {
+async function updateReview(reviewid,content) {
   const modalElement = document.getElementById("modal");
   const modalContent = modalElement.querySelector(".modal-content");
   modalContent.innerHTML = ` <div class="comment-form rounded p-4 ">
@@ -164,7 +167,7 @@ async function updateReview(reviewid) {
                         <div class="form-group mb-3">
                             <label class="d-block mb-1" for="comment">Your Review</label>
                             <textarea class="w-100 rounded p-2" id="comment" style="min-height: 100px;"
-                                required></textarea>
+                                required>${content}</textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" id="submitreview">Update Review</button>
                     </form>
