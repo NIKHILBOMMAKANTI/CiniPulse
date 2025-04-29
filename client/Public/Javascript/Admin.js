@@ -71,7 +71,7 @@ async function retriveAllMovies(limit,offset = 0) {
                     <h6 class="card-subtitle"><span>Release Date:</span>${Movie.releaseDate}</h6>
                     <h6 class="card-subtitle"><span>Genre:</span> Action, Adventure, Sci-Fi</h6>
                     <p class="card-text">${Movie.slicedcontent}.</p>
-                    <div class="d-flex mt-3">
+                    <div class="d-flex mt-3 action-buttons">
                         <button class="btn card-btn updatebtn" type="button"  data-movie-id = "${Movie._id}">
                             <i class="fas fa-edit me-1"></i> Update
                         </button>

@@ -69,13 +69,13 @@ const roleBasedAccess = (req, res) => {
     return res.status(200).json({
       message: "Access Granted",
       id: req.user_data._id,
-      redirectTo: "/index.html",
+      redirectTo: "/client/index.html",
     });
   } else {
     return res.status(200).json({
       message: "Access Granted",
       id: req.user_data._id,
-      redirectTo: "/Admin.html",
+      redirectTo: "/client/Admin.html",
     });
   }
 

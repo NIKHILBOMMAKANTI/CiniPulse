@@ -370,7 +370,7 @@ body {
   }
 
   .card-btn:first-child {
-    margin-right: 0;
+    margin-right: 15px;
   }
 }
 @media (max-width: 992px) {
@@ -383,5 +383,17 @@ body {
   .update-form-container .updatebtn {
     width: 100%;
     margin-top: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .action-buttons{
+    flex-direction: column;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .action-buttons {
+    /* flex-direction: column; */
+    margin: auto;
+    width: 70%;
   }
 }

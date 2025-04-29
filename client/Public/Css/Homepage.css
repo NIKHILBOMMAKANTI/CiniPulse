@@ -1,4 +1,4 @@
-/* CSS Reset */
+/* CSS Reset and Base Styles */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,36 +12,27 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} 
-
-
-
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 body {
     background-color: #0f0f1a;
@@ -53,10 +44,12 @@ body {
 .logo {
     color: #e50914;
 }
+
 .nav-links a {
     color: #ffffff;
     transition: color 0.3s;
 }
+
 .nav-links a:hover {
     color: #e50914;
 }
@@ -239,20 +232,119 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive adjustments */
+/* Consolidated Responsive Adjustments */
 @media (max-width: 992px) {
+    .hero-content {
+      
+        margin: 0 auto; 
+        text-align: center; 
+        padding: 0 20px; 
+        width: 100%; 
+        max-width: 1200px;
+    }
+    
     .hero-title {
-        font-size: 2.8rem;
+       
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 900px; 
     }
     
     .hero-description {
-        font-size: 1rem;
+        
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;
+    }
+    
+   
+    .hero-actions {
+        justify-content: center; 
+    }
+
+    .hero-actions .btn {
+        margin-right: 0; 
+    }
+    
+    .feature-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .feature-card p {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .nav-links {
+        margin-top: 20px;
+        justify-content: center;
+    }
+    
     .hero-section {
         height: 400px;
+    }
+    
+    .hero-content {
+        padding: 0 30px;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .hero-actions .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .features-section .row {
+        flex-direction: column;
+    }
+    
+    .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .footer .col-md-2 {
+        width: 50%;
+    }
+    
+    .footer-links {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        margin: 5px 10px;
+    }
+    
+    .hero-section {
+        height: 350px;
     }
     
     .hero-content {
@@ -260,26 +352,85 @@ footer {
     }
     
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
     }
     
     .hero-actions .btn {
+        width: 80%;
+        max-width: 200px;
         padding: 10px 20px;
-        font-size: 1rem;
-        margin-bottom: 10px;
-        display: block;
-        width: 100%;
-    }    
-}
-
-@media (max-width: 576px) {
-    .hero-section {
-        height: 350px;
+        margin: 0 auto 10px;
     }
     
+    .features-section h2 {
+        font-size: 2rem;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .footer .col-md-2, 
+    .footer .col-md-4 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        text-align: center;
+        display: block;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-links {
+        text-align: center;
+    }
+    
+    .footer-links h5:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 400px) {
     .hero-title {
         font-size: 1.8rem;
     }
     
+    .hero-description {
+        font-size: 0.9rem;
+    }
     
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    .footer-links {
+        margin-bottom: 25px;
+    }
+    
+    .hero-actions .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-description {
+        font-size: 0.85rem;
+    }
 }
