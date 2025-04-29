@@ -170,5 +170,14 @@ main{
     text-decoration: none; 
     display: block; 
 }
-
+@media (max-width: 576px) {
+    .maincontainer{
+      flex-direction: column;
+      margin: 15px;
+      
+    }
+    .container:first-child {
+        border-bottom: 1px solid white;
+    }
+  }
 
